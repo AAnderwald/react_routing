@@ -1,2 +1,30 @@
 /* Add custom styling here */
+* {
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+hr {
+    color: #3A537C;
+    border-top: 5px double #3A537C;
+}
+
+/* all three pages for line after each listing */
+.line {
+    border-bottom: 2px solid #3A537C;
+
+}
+
+/* navbar page */
+.list {
+    list-style-type: none;
+    background-color: #3A537C;
+    
+}
+
+
+/* home page */
+.logo {
+    text-align: center;
+}
 
