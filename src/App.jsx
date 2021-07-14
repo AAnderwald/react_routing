@@ -1,38 +1,24 @@
 import "./App.css";
 import {BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
-import Films from "./views/Films";
-import People from "./views/People";
-import Specie from "./views/Specie";
-import Home from "./views/Home";
+import {routes} from "./data/routes";
 
-
-const App = () => {
+const App = (props) => 
+{
   return (
     <BrowserRouter>
-      
         <Navbar />
-
-        <Switch>
-          <Route exact path ="/">
-            <Home />
-          </Route>
-          <Route exact path = "/Films">
-            <Films />
-          </Route>
-          <Route exact path = "/People">
-            <People />
-          </Route>
-          <Route exact path = "/Specie">
-            <Specie />
-          </Route>
-        </Switch>
-   
+        <main className="container my-3 bg-main">
+          <Switch>
+            {routes.list.map((route, idx) => (                        //if route a list you will need to map over the list
+              <Route key={idx} exact path={route.path}>
+                {(props) => <route.component {...props}/>}
+              </Route>
+            ))}
+          </Switch>
+        </main>
     </BrowserRouter>
- 
   );
-
-}
-
+};
 
 export default App;

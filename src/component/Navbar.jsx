@@ -1,40 +1,24 @@
 import {Link} from "react-router-dom";
+import {routes} from "../data/routes";
 
-
-function Navbar (props) 
+function Navbar () 
 {  
   return (
-    <nav >
-      <ul class="list">
-        <li>
-          <Link className="navHome" to="/">
-            Home
-          </Link>
-        </li>
-
-        <li>
-          <Link className="navFilms" to="/Films">
-            Films
-          </Link>
-        </li>
-
-        <li>
-          <Link className="navPeople"  to="/People">
-            People
-          </Link>
-        </li>
-
-        <li>
-          <Link className="navSpecie"  to="/Specie">
-            Species
-          </Link>
-        </li>
-      </ul>
+    <nav>
+        <ul id="listLook" >
+          {routes.list.map (({path, label }) => (
+            <li id="left" key={path}>
+                <Link to={path}>{label} </Link>
+            </li>
+          ))}
+            {/* <li id="right">
+              <img src="castle_hires_3.jpg" alt="cast in the sky photo" />
+            </li> */}
+        </ul>
       <hr />
     </nav>
   );
 }
-
 
 
   export default Navbar;

@@ -9,17 +9,24 @@ hr {
     border-top: 5px double #3A537C;
 }
 
-/* all three pages for line after each listing */
-.line {
-    border-bottom: 2px solid #3A537C;
-
+body {
+    background-color: rgb(250, 243, 243);
 }
 
+/* all three pages */
+
+ .pageHeaders {
+    color: #3A537C;
+    text-align: center;
+ } 
+
+
+
 /* navbar page */
-.list {
+#listLook {
     list-style-type: none;
     background-color: #3A537C;
-    
+    margin: 0;
 }
 
 
@@ -28,3 +35,46 @@ hr {
     text-align: center;
 }
 
+.indent {
+    margin-left: 10px;
+}
+
+.homeP {
+    color:  #3A537C;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.spiritAwayPhoto {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*vehicles page*/
+
+.vehicleImages {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (1, 1fr);
+}
+
+
+.sosukesBoat {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.airDestroyer {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.redWing {
+    grid-column: 3;
+    grid-row: 1;
+}
