@@ -25,26 +25,25 @@ function Vehicles()
                     </div>    
                 );
             })}
-            <div class="vehicleImages">
-                <div>
-                    <img class="sosukesBoat" src="Sosukes_Boat.jpg" alt="Sosuke's Boat" />
-                </div>
 
-                <div>
-                    <img class="airDestroyer"src="air_destoyer_goliath.jpg" alt="air deptroyer goliath" />
+            <div className="vehicleImages">
+                <div className="vehImagDiv1">
+                    <img className="sosukesBoat" src="Sosukes_Boat.jpg" alt="Sosuke's Boat" />
                 </div>
-
-                <div>
-                    <img class="redWing"src="porco_red_wing.jpg" alt="porco red wing" />
+                <div className="vehImagDiv2">
+                    <img className="airDestroyer"src="air_destoyer_goliath.jpg" alt="air deptroyer goliath" />
+                </div>
+                <div className="vehImagDiv3">
+                    <img className="redWing"src="porco_red_wing.jpg" alt="porco red wing" />
                 </div>
             </div>
         </div>
-
-
     );
+}
+
+    
     
 
-}
 
 
 

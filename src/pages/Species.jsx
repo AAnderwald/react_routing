@@ -21,7 +21,7 @@ function Species()
             {species.map((specie) =>
             {
                 return (
-                    <div key={SingleSpecies.id} className="line , card">
+                    <div key={SingleSpecies.id} className="speciesDiv card">
                    
                         <Link to={`/species/${specie.id}`}> {specie.name} </Link>
                         

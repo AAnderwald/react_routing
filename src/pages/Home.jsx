@@ -24,8 +24,8 @@ function Home (props) {
                 <div>
                     <p class="homeP">
                         <br></br>
-                        Included in their fils is <a href="https://ghiblicollection.com/product/spirited-away?product_id=6642" target="_blank"> Spirited Away,</a>  which was the first animi file to win and Academy Award 
-                        (Best Animated Feature)
+                        Their film <a href="https://ghiblicollection.com/product/spirited-away?product_id=6642" target="_blank"> Spirited Away,</a>  was the first anime film to win and Academy Award 
+                        (for Best Animated Feature.)
                     </p>
                 </div>
 

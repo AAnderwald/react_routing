@@ -9,6 +9,7 @@ import SingleFilm from "../pages/SingleFilm";
 import SingleCharacter from "../pages/SingleCharacter";
 import SingleSpecies from "../pages/SingleSpecies";
 import SingleVehicles from "../pages/SingleVehicles";
+import SingleLocation from "../pages/SingleLocation";
 
 class Route 
 {
@@ -41,6 +42,7 @@ export const routes = new Routes()
     .addRoute (new Route(Species, "/species", "Species"))
     .addRoute (new Route(SingleSpecies, "/species/:id", "", false))
     .addRoute (new Route(Locations, "/locations", "Locations"))
+    .addRoute (new Route(SingleLocation, "/locations/:id", "", false))
     .addRoute (new Route(Vehicles, "/vehicles", "Vehicles"))
     .addRoute (new Route(SingleVehicles, "/vehicles/:id", "", false));
    

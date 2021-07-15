@@ -1,4 +1,5 @@
 import {Component} from "react"; 
+import {Link} from "react-router-dom";
 
 // this is the class one
 class Locations extends Component {
@@ -6,10 +7,9 @@ class Locations extends Component {
     constructor (props) 
     {
         super (props);
-
         this.state = 
         {
-            locations: [],
+            list: [],
         };
     }
 
@@ -17,29 +17,27 @@ class Locations extends Component {
     {
         fetch ("https://ghibliapi.herokuapp.com/locations")
             .then((res) => res.json())
-            .then((data) => this.setState({locations: data}))
+            .then((data) => this.setState({list: data}))
     }
-
 
     render () 
     {
         return (
             <div>
-                <h2 class="pageHeaders">List of Locations</h2>
-                {this.state.locations.map((location) =>
-                {
-                    return (
-                        <div key ={location.id} className="line">
-                            <h4>{location.name}</h4>
-                            <p> <strong>Climate: </strong> {location.climate}</p>
-                            <p> <strong>Terrain: </strong> {location.terrain}   <strong>Surface Water: </strong> {location.surface_water}</p>
-                        </div>
-                    );
+                <h2 className="pageHeaders">List of Locations</h2>
 
-                })}
-            </div>
-        );
-
+                <div className="list-group">
+                        {this.state.list.map((item) => (
+                            <div key ={item.id} className="list-group-item">
+                                <Link to={`/locations/${item.id}`}> {item.name}</Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )
+        }
     }
-}    
+    
+    
+
     export default Locations;

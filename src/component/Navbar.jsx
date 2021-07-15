@@ -5,15 +5,15 @@ function Navbar ()
 {  
   return (
     <nav>
-        <ul id="listLook" >
+        <ul class="navBarGrid" id="listLook" >
           {routes.list.map (({path, label }) => (
-            <li id="left" key={path}>
+            <li class="items1" id="left" key={path}>
                 <Link to={path}>{label} </Link>
             </li>
           ))}
-            {/* <li id="right">
+            <li class="items2" id="right">
               <img src="castle_hires_3.jpg" alt="cast in the sky photo" />
-            </li> */}
+            </li> 
         </ul>
       <hr />
     </nav>
